@@ -9,10 +9,10 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: run.tex
+          root_file: LaTeX-Documentation/run.tex
           working_directory: LaTeX-Documentation
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
           name: PDF
-          path: YourProjectName.pdf
+          path: LaTeX-Documentation/YourProjectName.pdf
