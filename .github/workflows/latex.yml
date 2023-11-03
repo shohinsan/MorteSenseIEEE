@@ -1,8 +1,12 @@
 name: Build LaTeX document
 
-on: [push]
+on:
+  push:
+    tags:
+      - "v*.*.*"
 
 jobs:
+  # This job compiles the LaTeX document
   build_latex:
     runs-on: ubuntu-latest
     steps:
@@ -15,11 +19,15 @@ jobs:
           working-directory: LaTeX-Documentation
       - name: List files
         run: ls LaTeX-Documentation
+
+      # Upload the compiled PDF file as an artifact
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
           name: LaTeX_PDF
           path: LaTeX-Documentation/run.pdf
+
+      # Create a release in GitHub
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
