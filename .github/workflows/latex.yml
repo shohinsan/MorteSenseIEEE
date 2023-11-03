@@ -24,4 +24,3 @@ jobs:
           tag_name: v1.0 
           name: PDF
           files: LaTeX-Documentation/run.pdf
-          token: ${{ secrets.LATEX }}
