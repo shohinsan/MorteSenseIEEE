@@ -27,9 +27,6 @@ jobs:
           name: PDF
           path: LaTeX-Documentation/run.pdf
 
-      - name: Create Git tag
-        run: git tag -a ${{ github.ref }} -m "Auto-generated tag from workflow"
-
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
