@@ -1,27 +1,32 @@
 name: Build LaTeX document
-on: [push]
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
       - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v2
         with:
           root_file: run.tex
-          working_directory: LaTeX-Documentation
+          working-directory: LaTeX-Documentation
       - name: List files
         run: ls LaTeX-Documentation
       - name: Upload PDF file
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: LaTeX_PDF
           path: LaTeX-Documentation/run.pdf
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v1.0 
-          name: PDF
+          tag_name: v1.0
+          name: Release v1.0
           files: LaTeX-Documentation/run.pdf
           token: ${{ secrets.LATEX }}
