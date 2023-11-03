@@ -27,6 +27,9 @@ jobs:
           name: PDF
           path: LaTeX-Documentation/run.pdf
 
+      - name: Print GitHub ref
+        run: echo "GitHub ref is ${{ github.ref }}"
+
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
