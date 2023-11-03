@@ -40,10 +40,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: PDF
-          path: LaTeX-Documentation
-
-      - name: Move PDF to the repository
-        run: mv LaTeX-Documentation/run.pdf run.pdf
+          path: LaTeX-Documentation/run.pdf
 
       - name: Commit and push PDF to the repository
         run: |
