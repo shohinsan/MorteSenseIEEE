@@ -1,6 +1,9 @@
 name: Build LaTeX document
 
-on: [push]
+on:
+  push:
+    tags:
+      - "v*.*.*"
 
 jobs:
   build_latex:
@@ -22,9 +25,8 @@ jobs:
           path: LaTeX-Documentation/run.pdf
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           tag_name: v1.0
           name: Release v1.0
           files: LaTeX-Documentation/run.pdf
-          token: ${{ secrets.LATEX }}
+          token: ${{ secrets.GITHUB_TOKEN }}
