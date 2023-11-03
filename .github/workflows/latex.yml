@@ -36,12 +36,6 @@ jobs:
           files: LaTeX-Documentation/run.pdf
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Download PDF artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: PDF
-          path: LaTeX-Documentation/run.pdf
-
       - name: Commit and push PDF to the repository
         run: |
           git config --global user.email "action@github.com"
