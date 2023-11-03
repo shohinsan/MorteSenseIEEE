@@ -13,8 +13,8 @@ jobs:
           working_directory: LaTeX-Documentation
       - name: List files
         run: ls LaTeX-Documentation
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v3
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: PDF
-          path: LaTeX-Documentation/YourProjectName.pdf
+          generate_release_notes: true
+          files: YourProjectName.pdf
