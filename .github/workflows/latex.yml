@@ -3,7 +3,7 @@ name: Build LaTeX document
 on:
   push:
     tags:
-      - "v*.*.*"
+      - 'v*.*.*'
 
 jobs:
   # This job compiles the LaTeX document
@@ -31,7 +31,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: v1.0
-          name: Release v1.0
+          tag_name: ${{ github.ref }}
+          name: Release ${{ github.ref }}
           files: LaTeX-Documentation/run.pdf
           token: ${{ secrets.GITHUB_TOKEN }}
