@@ -15,9 +15,11 @@ jobs:
         run: ls LaTeX-Documentation
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
+        with:
+          name: LaTeX_PDF
+          path: LaTeX-Documentation/run.pdf
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           name: PDF
-          path: LaTeX-Documentation/run.pdf
-
+          file: LaTeX-Documentation/run.pdf
