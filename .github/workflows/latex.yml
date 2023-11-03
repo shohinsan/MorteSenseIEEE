@@ -1,10 +1,5 @@
 name: Build LaTeX document
-
-on:
-  push:
-    tags:
-      - "v*.*.*"
-      
+on: [push]
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -18,8 +13,8 @@ jobs:
           working_directory: LaTeX-Documentation
       - name: List files
         run: ls LaTeX-Documentation
-      - name: Release
-        uses: softprops/action-gh-release@v1
+      - name: Upload PDF file
+        uses: actions/upload-artifact@v3
         with:
           name: PDF
           path: LaTeX-Documentation/YourProjectName.pdf
