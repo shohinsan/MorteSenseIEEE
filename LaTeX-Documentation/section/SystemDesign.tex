@@ -4,12 +4,7 @@
 
 \subsubsection{Project Hardware Architecture}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.8\linewidth]{images/pcbDiagram}
-    \caption{PCB Diagram}
-    \label{fig:pcbDiagram}
-\end{figure}
+\input{diagrams/PCBDiagram}
 
 The PCB (Printed Circuit Board Diagram) diagram depicts the layout of the DIY security
 circuit board. %
@@ -50,12 +45,7 @@ information. %
 The microcontroller has full control over the motion detector which allows users to do the precise configuration of system parameters, such as motion
 detection range, sensitivity, etc. %
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=1.5\linewidth, angle=-90]{images/hardwarearchitecture}
-    \caption{Project Hardware Architecture}
-    \label{fig:hardwareArchitecture}
-\end{figure}
+\input{diagrams/HardwareArchitectureDiagram}
 
 \subsubsection{Project Software Architecture}
 
@@ -70,30 +60,7 @@ The Reporting and Analytics component is responsible for generating reports on t
 detections per day and average response time. %
 It will help to analyze and further improve the quality of the systems. %
 
-
-\begin{figure}
-    \centering
-    \begin{tikzpicture}[scale=0.65]
-        \begin{umlcomponent}[x=4,y=0]{Cloud Workspace}
-            \umlbasiccomponent[x=1,y=-2]{User Management Service - UI}
-            \umlbasiccomponent[x=1,y=-4.5]{Reporting/Analytics Service}
-            \umlbasiccomponent[x=1,y=-6.8]{Database}
-            \begin{umlcomponent}[x=5.5,y=-3]{Notification Service}
-                \umlbasiccomponent[x=1, y=-2]{Twilio API}
-            \end{umlcomponent}
-        \end{umlcomponent}
-        \umlbasiccomponent[x=4.5,y=-10.6]{Sensor Management Software}
-        \umlbasiccomponent[x=11,y=-10.6]{Client Device}
-
-        % Bigger, thicker, and dashed arrows
-        \draw[-latex, line width=1.5pt, dashed] (Sensor Management Software.north) -- (Notification Service.west);
-        \draw[-latex, line width=1.5pt, dashed] (Twilio API.south) -- (Client Device.north);
-    \end{tikzpicture}
-    \caption{Software Architecture}
-    \label{fig:softwareArchitecture}
-\end{figure}
-
-
+\input{diagrams/SoftwareArchitectureDiagram}
 
 User Management Service (UI) will provide an interface for users to register and
 authenticate their devices and configure notification settings. %
@@ -102,75 +69,7 @@ Additionally, it will have an audit trail of all activity in the system, includi
 The systems above will be powered by Amazon AWS, it allows us to expand and process
 the volume of traffic. %
 
-\begin{figure}
-    \begin{tikzpicture}[scale=0.7, every node/.style={scale=0.7}]
-
-        \pgfdeclarelayer{background}
-        \pgfdeclarelayer{foreground}
-        \pgfdeclarelayer{connectionlayers}
-        \pgfsetlayers{background,connectionlayers,main,foreground}
-
-        \begin{class}[text width=4cm]{User}{4.5,0}
-            \operation{startSecurity() : boolean}
-        \end{class}
-
-        \begin{class}[text width=3cm]{MicrowaveSensor}{0 , -2.5}
-            \inherit{User}
-            \attribute{sensorId : int}
-            \attribute{sensorName : string}
-            \attribute{status : boolean}
-            \attribute{threshold : int}
-            \operation{isActive() : void}
-            \operation{detectMotion() : void}
-        \end{class}
-
-        \begin{class}[text width=3cm]{Notifications}{4.5 , -2.5}
-            \inherit{MicrowaveSensor}
-            \attribute{notificationId : int}
-            \attribute{message : string}
-            \attribute{status : boolean}
-        \end{class}
-
-        \begin{class}[text width=3cm]{SMSService}{9, -2.5}
-            \inherit{Notifications}
-            \attribute{smsServiceId : int}
-            \attribute{phoneNumber : int}
-            \operation{sendSMS() : void}
-            \operation{setStatus() : void}
-            \operation{create() : void}
-        \end{class}
-        \begin{class}[text width=3.5cm]{MicrowaveSensorLog}{0 , -7}
-            \inherit{MicrowaveSensor}
-            \attribute{logId : int}
-            \attribute{sensorId : int}
-            \attribute{timestamp : int}
-        \end{class}
-
-        \begin{class}[text width=3cm]{NotificationsLog}{4.5 , -6.5}
-            \inherit{Notifications}
-            \attribute{logId : int}
-            \attribute{notificationId : int}
-            \attribute{timestamp : int}
-        \end{class}
-
-        \begin{class}[text width=3cm]{SMSServiceLog}{9, -6.5}
-            \inherit{SMSService}
-            \attribute{logId : int}
-            \attribute{smsServiceId : int}
-            \attribute{timestamp : int}
-        \end{class}
-
-        \begin{class}[text width=3cm]{Database}{4.5 , -10}
-            \inherit{MicrowaveSensorLog}
-            \inherit{NotificationsLog}
-            \inherit{SMSServiceLog}
-            \operation{save() : void}
-        \end{class}
-
-    \end{tikzpicture}
-    \caption{Software Class Diagram}\label{fig:figure}
-\end{figure}
-
+\input{diagrams/ClassDiagram}
 
 The Class Diagram represents the relationships between various classes in the
 Microwave Motion Security System with SMS Notifications. %
@@ -202,60 +101,7 @@ Overall, the Class Diagram demonstrates the flow of information and data between
 comprehensive representation of the Microwave Motion Security System with
 SMS Notifications. %
 
-
-\begin{figure}
-    \centering
-    \begin{sequencediagram}
-        \tikzstyle{inststyle}+=[bottom color=yellow]
-        \tikzstyle{every node}+=[node distance=0.75cm and 0.75cm]
-
-        \newthread{U}{:User}
-        \newinst[0.75]{S}{:Sensor}
-        \newinst[0.75]{T}{:Twilio}
-        \newinst[0.75]{D}{:Database}
-
-        \begin{sdblock}[green!20]{Device}{}
-            \begin{call}{U}{Create Device}{S}
-            {{\parbox{2cm}{\centering Acknowledge Device Creation}}}
-                \begin{call}{S}
-                {Store Device Data}{D}{Acknowledge Device Creation}
-                \end{call}
-            \end{call}
-        \end{sdblock}
-
-        \begin{sdblock}[green!20]{Connect Mobile}{}
-            \begin{call}{U}
-            {{\parbox{2cm}{\centering Connect to Phone}}}{S}
-            {{\parbox{2cm}{\centering Acknowledge Connection Update}}}
-                \begin{call}{S}{Update Connection Status}{D}{Ackn. Connection Update}
-                \end{call}
-            \end{call}
-        \end{sdblock}
-
-        \begin{sdblock}[green!20]{Subscribe to Alert}{}
-            \begin{call}{U}
-            {{\parbox{2cm}{\centering Subscribe to Alerts}}}{T}
-            {{\parbox{2cm}{\centering Provide User's Alert Preferences}}}
-                \begin{call}{T}
-                {{\parbox{2cm}{\centering Retrieve User's Alert Preferences}}}{D}
-                {{\parbox{3cm}{\centering Ackn. Subs.}}}
-                \end{call}
-            \end{call}
-        \end{sdblock}
-
-        \begin{sdblock}[green!20]{Receive Alert}{}
-            \begin{call}{U}{Request Alert}{S}{Notify User}
-                \begin{call}{S}{Retrieve Alert Data}{D}{Provide Alert Data}
-                \end{call}
-                \begin{call}{S}{Send Alert}{T}{}
-                \end{call}
-            \end{call}
-        \end{sdblock}
-
-    \end{sequencediagram}
-    \caption{Software Sequence Diagram}
-    \label{fig:softwareSeqDiagramUpdated}
-\end{figure}
+\input{diagrams/SequenceDiagram}
 
 The sequence of events is as follows:
 \begin{enumerate}
