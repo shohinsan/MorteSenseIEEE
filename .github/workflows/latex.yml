@@ -25,6 +25,7 @@ jobs:
           path: LaTeX-Documentation/run.pdf
       - name: Release
         uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           tag_name: v1.0
           name: Release v1.0
