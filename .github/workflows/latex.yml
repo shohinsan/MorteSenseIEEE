@@ -25,7 +25,7 @@ jobs:
           name: PDF
           path: LaTeX-Documentation/run.pdf
 
-      - name: Print GitHub ref
+      - name: Check if tags format matches
         run: echo "GitHub ref is ${{ github.ref }}"
 
       - name: Release
