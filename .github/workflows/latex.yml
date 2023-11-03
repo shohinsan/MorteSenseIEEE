@@ -38,7 +38,6 @@ jobs:
 
       - name: Commit and push PDF to the repository
         run: |
-          cd LaTeX-Documentation
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git add run.pdf
