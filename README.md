@@ -34,3 +34,7 @@
  * Snippets
  * Shortcuts
  * ColoredBrand
+
+## Pull Request Suggestion
+ * Create new branch for each section/chapter, new additions
+ * Make sure you and your team mates are working on different files, simply avoiding merge conflicts
