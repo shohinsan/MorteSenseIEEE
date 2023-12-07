@@ -1,5 +1,8 @@
 # MorteSenseIEEE
 
+## About
+
+The document exemplifies a design philosophy inspired by SOLID principles, embodying a resilient and adaptable structure. Leveraging an extensive array of macros, the document achieves heightened reusability while mitigating redundancy, encapsulating prevalent structures, styles, and formatting. This approach ensures a consistent and cohesive presentation across the entirety of the project. Additionally, the project is fortified with a robust Continuous Integration/Continuous Deployment (CI/CD) pipeline, serving to optimize collaboration and development workflows, thereby fostering efficiency and agility in the software development life cycle.
 
 [LaTeX Page Layout](https://www.overleaf.com/learn/latex/Page_size_and_margins)
 
@@ -13,28 +16,11 @@
 
 ## Releases
 
+* Make Changes to your repo
 * Open Releases
-* Create a release title
-* Create a title
-* Run
+* Edit Release
+* Increment Tag Manually
 
-## Additional Pages Supported
-
-### Must be used in the runner file:
- * \input{lib/extras/TableOfContents}
- * \input{lib/extras/Appendices}
- * \input{lib/extras/Acknowledgement}
- * \input{lib/extras/Biography}
-#### Note that:
- * ToC is not necessary for IEEE template
- * Biography works if documentclass is journal
-
-## Additional Macros Supported
- * Graphs
- * Snippets
- * Shortcuts
- * ColoredBrand
-
-## Pull Request Suggestion
- * Create new branch for each section/chapter, new additions
+## Team work
+ * Create new branch for each section/chapter, new additions, once finished, send PR to main branch
  * Make sure you and your team mates are working on different files, simply avoiding merge conflicts
