@@ -1,5 +1,9 @@
 # MorteSenseIEEE
 
+## LaTeX Repository
+
+[Link to IEEE Documentation written in LaTeX](https://github.com/shohinsan/MorteSenseIEEE)
+
 ## About
 
 The document exemplifies a design philosophy inspired by SOLID principles, embodying a resilient and adaptable structure. Leveraging an extensive array of macros, the document achieves heightened reusability while mitigating redundancy, encapsulating prevalent structures, styles, and formatting. This approach ensures a consistent and cohesive presentation across the entirety of the project. Additionally, the project is fortified with a robust Continuous Integration/Continuous Deployment (CI/CD) pipeline, serving to optimize collaboration and development workflows, thereby fostering efficiency and agility in the software development life cycle.
