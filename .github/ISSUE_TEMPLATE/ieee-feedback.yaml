@@ -45,7 +45,9 @@ body:
   - type: textarea
     attributes:
       label: Clarity & Accessibility
-      description: Describe the clarity and accessibility of the paper to the project
+      description: |
+        Describe the clarity and accessibility of the paper to the project.
+        Scale (1-5):
   - type: dropdown
     attributes:
       label: Scale
@@ -55,24 +57,6 @@ body:
           - 3
           - 4
           - 5
-
-  - type: fieldset
-    attributes:
-      label: "Clarity & Accessibility"
-      description: "Describe the clarity and accessibility of the paper to the project"
-    fields:
-      - type: textarea
-        attributes:
-          label: "Description"
-      - type: dropdown
-        attributes:
-          label: "Scale"
-          options:
-            - 1
-            - 2
-            - 3
-            - 4
-            - 5
         
   - type: textarea
     attributes:
