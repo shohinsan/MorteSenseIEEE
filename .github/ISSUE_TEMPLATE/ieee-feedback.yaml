@@ -1,0 +1,104 @@
+name: 📗 IEEE Reviewer Feedback
+description: Tell us if there is missing or incorrect documentation
+labels: [feedback]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report this issue. Your feedback is highly valuable in ensuring the quality of our journal. 
+        Please provide the following information to help us address the problem effectively:
+
+        **Reviewer Ratings:**
+        - **Relevance:** [1] [2] [3] [4] [5] &nbsp;&nbsp;
+        - **Validity:** [1] [2] [3] [4] [5] &nbsp;&nbsp;
+        - **Significance/Original Contribution:** [1] [2] [3] [4] [5] &nbsp;&nbsp;
+        - **Methodological Basis & Rigor:** [1] [2] [3] [4] [5] &nbsp;&nbsp;
+        - **Clarity & Accessibility:** [1] [2] [3] [4] [5] &nbsp;&nbsp;
+        - **Overall Rating:** [1] [2] [3] [4] [5]
+
+        Please use the dropdown menus to select your ratings (1-5), and explain your ratings in the text areas below. Additional comments are also welcome.
+
+  - type: dropdown
+    attributes:
+      label: What is the type of issue?
+      multiple: true
+      options:
+        - Relevance
+        - Validity
+        - Significance/Original Contribution
+        - Methodological Basis & Rigor
+        - Clarity & Accessibility
+  - type: dropdown
+    attributes:
+      label: Issuer?
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Issuer Comments
+  - type: dropdown
+    attributes:
+      label: Relevance
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+    description: If possible, please provide the URL(s) where you found this issue.
+  - type: textarea
+    attributes:
+      label: Relevance Comments
+  - type: dropdown
+    attributes:
+      label: Validity
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+    description: If possible, please provide the URL(s) where you found this issue.
+  - type: textarea
+    attributes:
+      label: Validity Comments
+  - type: dropdown
+    attributes:
+      label: Significance/Original Contribution
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+    description: If possible, please provide the URL(s) where you found this issue.
+  - type: textarea
+    attributes:
+      label: Significance/Original Contribution Comments
+  - type: dropdown
+    attributes:
+      label: Methodological Basis & Rigor
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+    description: If possible, please provide the URL(s) where you found this issue.
+  - type: textarea
+    attributes:
+      label: Methodological Basis & Rigor Comments
+  - type: textarea
+    attributes:
+      label: Clarity & Accessibility
+      description: If possible, please provide the URL(s) where you found this issue.
+  - type: textarea
+    attributes:
+      label: Comments to Author
+      description: If possible, please provide the URL(s) where you found this issue.
