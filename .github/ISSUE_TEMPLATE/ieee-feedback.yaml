@@ -26,6 +26,21 @@ body:
       description: accepted for major or final 
     validations:
       required: true
+
+  - type: textarea
+    attributes:
+      label: Relevance
+      description: Describe the relevance of the paper to the project.
+      
+  - type: dropdown
+    attributes:
+      label: Scale ..........................
+      options:
+          - 1
+          - Somewhat relevant (2)
+          - 3
+          - Good match (4)
+          - 5
           
   - type: textarea
     attributes:
