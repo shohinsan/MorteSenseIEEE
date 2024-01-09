@@ -19,86 +19,88 @@ body:
         - Methodological Basis & Rigor
         - Clarity & Accessibility
         - Other (Please specify)
+        
   - type: textarea
     attributes:
       label: What type of revision is this issue about?
       description: accepted for major or final 
     validations:
       required: true
+      
   - type: textarea
     attributes:
       label: Relevance
       description: Describe the relevance of the paper to the project.
       
-  - type: dropdown
-    attributes:
-      label: Scale
-      options:
-          - 1
-          - Somewhat relevant (2)
-          - 3
-          - Good match (4)
-          - 5
+  # - type: dropdown
+  #   attributes:
+  #     label: Scale
+  #     options:
+  #         - 1
+  #         - Somewhat relevant (2)
+  #         - 3
+  #         - Good match (4)
+  #         - 5
           
   - type: textarea
     attributes:
       label: Validity
       description: Describe the validity of the paper to the project.
       
-  - type: dropdown
-    attributes:
-      label: Scale
-      options:
-          - 1
-          - 2
-          - Neutral (neither agree nor disagree) (3)
-          - Agree (4)
-          - Strongly Agree (5)
+  # - type: dropdown
+  #   attributes:
+  #     label: Scale
+  #     options:
+  #         - 1
+  #         - 2
+  #         - Neutral (neither agree nor disagree) (3)
+  #         - Agree (4)
+  #         - Strongly Agree (5)
           
   - type: textarea
     attributes:
       label: Significance/Original Contribution
       description: Describe the significance or original contribution of the paper to the project.
       
-  - type: dropdown
-    attributes:
-      label: Scale
-      options:
-          - 1
-          - 2
-          - Neutral (neither agree nor disagree) (3)
-          - Agree (4)
-          - Strongly Agree (5)
+  # - type: dropdown
+  #   attributes:
+  #     label: Scale
+  #     options:
+  #         - 1
+  #         - 2
+  #         - Neutral (neither agree nor disagree) (3)
+  #         - Agree (4)
+  #         - Strongly Agree (5)
           
   - type: textarea
     attributes:
       label: Methodological Basis & Rigor
       description: Describe the methodological basis & rigor of the paper to the project.
       
-  - type: dropdown
-    attributes:
-      label: Scale
-      options:
-          - 1
-          - 2
-          - Neutral (neither agree nor disagree) (3)
-          - 4
-          - Strongly Agree (5)
+  # - type: dropdown
+  #   attributes:
+  #     label: Scale
+  #     options:
+  #         - 1
+  #         - 2
+  #         - Neutral (neither agree nor disagree) (3)
+  #         - 4
+  #         - Strongly Agree (5)
           
   - type: textarea
     attributes:
       label: Clarity & Accessibility
       description: Describe the clarity and accessibility of the paper to the project.
       
-  - type: dropdown
-    attributes:
-      label: Scale
-      options:
-          - 1
-          - Needs Significant Improvement (2)
-          - 3
-          - Clear & Concise (4)
-          - 5
+  # - type: dropdown
+  #   attributes:
+  #     label: Scale
+  #     options:
+  #         - 1
+  #         - Needs Significant Improvement (2)
+  #         - 3
+  #         - Clear & Concise (4)
+  #         - 5
           
   - type: textarea
     attributes:
