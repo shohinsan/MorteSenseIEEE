@@ -92,15 +92,15 @@ body:
       label: Clarity & Accessibility
       description: Describe the clarity and accessibility of the paper to the project.
       
-  # - type: dropdown
-  #   attributes:
-  #     label: Scale
-  #     options:
-  #         - 1
-  #         - Needs Significant Improvement (2)
-  #         - 3
-  #         - Clear & Concise (4)
-  #         - 5
+  - type: dropdown
+    attributes:
+      label: Scale
+      options:
+          - 1
+          - Needs Significant Improvement (2)
+          - 3
+          - Clear & Concise (4)
+          - 5
           
   - type: textarea
     attributes:
