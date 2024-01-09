@@ -45,6 +45,17 @@ body:
     attributes:
       label: Clarity & Accessibility
       description: Describe the clarity and accessibility of the paper to the project
+      
+  - type: dropdown
+    attributes:
+      label: Scale
+      options:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        
   - type: textarea
     attributes:
       label: Comments to Author
