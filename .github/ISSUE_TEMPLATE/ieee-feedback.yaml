@@ -77,15 +77,15 @@ body:
       label: Methodological Basis & Rigor
       description: Describe the methodological basis & rigor of the paper to the project.
       
-  # - type: dropdown
-  #   attributes:
-  #     label: Scale
-  #     options:
-  #         - 1
-  #         - 2
-  #         - Neutral (neither agree nor disagree) (3)
-  #         - 4
-  #         - Strongly Agree (5)
+  - type: dropdown
+    attributes:
+      label: Scale
+      options:
+          - 1
+          - 2
+          - Neutral (neither agree nor disagree) (3)
+          - 4
+          - Strongly Agree (5)
           
   - type: textarea
     attributes:
