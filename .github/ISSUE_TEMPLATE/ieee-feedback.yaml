@@ -35,7 +35,6 @@ body:
   - type: dropdown
     attributes:
     label: Scale .................
-      
     options:
           - 1
           - Somewhat relevant (2)
