@@ -41,21 +41,38 @@ body:
     attributes:
       label: Methodological Basis & Rigor
       description: Describe the methodological basis & rigor of the paper to the project
-      
-  fields:
-    - type: textarea
-      attributes:
-        label: Clarity & Accessibility
-        description: Describe the clarity and accessibility of the paper to the project
-    - type: dropdown
-      attributes:
-        label: Scale
-        options:
+  
+  - type: textarea
+    attributes:
+      label: Clarity & Accessibility
+      description: Describe the clarity and accessibility of the paper to the project
+  - type: dropdown
+    attributes:
+      label: Scale
+      options:
           - 1
           - 2
           - 3
           - 4
           - 5
+
+  - type: fieldset
+    attributes:
+      label: "Clarity & Accessibility"
+      description: "Describe the clarity and accessibility of the paper to the project"
+    fields:
+      - type: textarea
+        attributes:
+          label: "Description"
+      - type: dropdown
+        attributes:
+          label: "Scale"
+          options:
+            - "1"
+            - "2"
+            - "3"
+            - "4"
+            - "5"
         
   - type: textarea
     attributes:
