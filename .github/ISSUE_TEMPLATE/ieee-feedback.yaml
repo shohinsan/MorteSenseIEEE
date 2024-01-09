@@ -1,6 +1,7 @@
-name: 📗 IEEE Reviewer Feedback
-description: Tell us if there is missing or incorrect documentation
-labels: [feedback]
+name: "IEEE Reviewer Feedback"
+about: "Tell us if there is missing or incorrect documentation"
+labels:
+  - "feedback"
 body:
   - type: markdown
     attributes:
@@ -20,85 +21,103 @@ body:
 
   - type: dropdown
     attributes:
-      label: What is the type of issue?
+      label: "What is the type of issue?"
       multiple: true
       options:
-        - Relevance
-        - Validity
-        - Significance/Original Contribution
-        - Methodological Basis & Rigor
-        - Clarity & Accessibility
+        - "Relevance"
+        - "Validity"
+        - "Significance/Original Contribution"
+        - "Methodological Basis & Rigor"
+        - "Clarity & Accessibility"
+      
   - type: dropdown
     attributes:
-      label: Issuer?
+      label: "Issuer?"
       options:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
     validations:
       required: true
+      
   - type: textarea
     attributes:
-      label: Issuer Comments
+      label: "Issuer Comments"
+
   - type: dropdown
     attributes:
-      label: Relevance
+      label: "Relevance"
       options:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-    description: If possible, please provide the URL(s) where you found this issue.
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+    description: "If possible, please provide the URL(s) where you found this issue."
+
   - type: textarea
     attributes:
-      label: Relevance Comments
+      label: "Relevance Comments"
+
   - type: dropdown
     attributes:
-      label: Validity
+      label: "Validity"
       options:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-    description: If possible, please provide the URL(s) where you found this issue.
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+    description: "If possible, please provide the URL(s) where you found this issue."
+
   - type: textarea
     attributes:
-      label: Validity Comments
+      label: "Validity Comments"
+
   - type: dropdown
     attributes:
-      label: Significance/Original Contribution
+      label: "Significance/Original Contribution"
       options:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-    description: If possible, please provide the URL(s) where you found this issue.
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+    description: "If possible, please provide the URL(s) where you found this issue."
+
   - type: textarea
     attributes:
-      label: Significance/Original Contribution Comments
+      label: "Significance/Original Contribution Comments"
+
   - type: dropdown
     attributes:
-      label: Methodological Basis & Rigor
+      label: "Methodological Basis & Rigor"
       options:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-    description: If possible, please provide the URL(s) where you found this issue.
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+    description: "If possible, please provide the URL(s) where you found this issue."
+
   - type: textarea
     attributes:
-      label: Methodological Basis & Rigor Comments
+      label: "Methodological Basis & Rigor Comments"
+
   - type: textarea
     attributes:
-      label: Clarity & Accessibility
-      description: If possible, please provide the URL(s) where you found this issue.
+      label: "Clarity & Accessibility"
+      options:
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+      description: "If possible, please provide the URL(s) where you found this issue."
+
   - type: textarea
     attributes:
-      label: Comments to Author
-      description: If possible, please provide the URL(s) where you found this issue.
+      label: "Comments to Author"
+      description: "If possible, please provide the URL(s) where you found this issue."
