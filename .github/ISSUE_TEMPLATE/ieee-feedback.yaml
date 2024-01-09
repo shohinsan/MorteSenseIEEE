@@ -31,7 +31,7 @@ body:
       description: Describe the relevance of the paper to the project
   - type: dropdown
     attributes:
-      label: On a scale 1-5, how much relevant is it?
+      label: Scale
       options:
         - 1
         - 2
@@ -44,7 +44,7 @@ body:
       description: Describe the validity of the paper to the project
   - type: dropdown
     attributes:
-      label: On a scale 1-5, how much relevant is it?
+      label: Scale
       options:
         - 1
         - 2
@@ -57,7 +57,7 @@ body:
       description: Describe the significance or original contribution of the paper to the project
   - type: dropdown
     attributes:
-      label: On a scale 1-5, how much relevant is it?
+      label: Scale
       options:
         - 1
         - 2
@@ -70,7 +70,7 @@ body:
       description: Describe the methodological basis & rigor of the paper to the project
   - type: dropdown
     attributes:
-      label: On a scale 1-5, how much relevant is it?
+      label: Scale
       options:
         - 1
         - 2
@@ -83,7 +83,7 @@ body:
       description: Describe the clarity and accessibility of the paper to the project
   - type: dropdown
     attributes:
-      label: On a scale 1-5, how much relevant is it?
+      label: Scale
       options:
         - 1
         - 2
