@@ -79,7 +79,6 @@ body:
       
   - type: dropdown
     attributes:
-      label: Scale
       options:
           - 1
           - 2
@@ -94,7 +93,6 @@ body:
       
   - type: dropdown
     attributes:
-      label: Scale
       options:
           - 1
           - Needs Significant Improvement (2)
