@@ -27,14 +27,13 @@ body:
     validations:
       required: true
       
-  - type: textarea
-    attributes:
-      label: Relevance
-      description: Describe the relevance of the paper to the project.
-      
   - type: dropdown
     attributes:
-      label: Scale ..................................
+     label: |
+        Relevance: Relates both to a) the design, engineering, use or understanding of technology (broadly defined) 
+        and its impacts, and b) fostering the advancement of sustainability via technology. 
+        Relevance to assigned track and/or any other conference themes.
+    
       options:
           - 1
           - Somewhat relevant (2)
