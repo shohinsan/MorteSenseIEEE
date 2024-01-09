@@ -29,10 +29,9 @@ body:
       
   - type: dropdown
     attributes:
-    label: >
-      Relevance: Relates both to a) the design, engineering, use or understanding of technology (broadly defined) 
-      and its impacts, and b) fostering the advancement of sustainability via technology. 
-      Relevance to assigned track and/or any other conference themes.
+    label: "Relevance: Relates both to a) the design, engineering, use or understanding of technology (broadly defined) \
+      and its impacts, and b) fostering the advancement of sustainability via technology. \
+      Relevance to assigned track and/or any other conference themes."
       
     options:
           - 1
