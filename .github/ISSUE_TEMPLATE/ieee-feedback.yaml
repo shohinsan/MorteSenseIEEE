@@ -34,7 +34,7 @@ body:
       
   - type: dropdown
     attributes:
-      label: Scale Relevance
+      label: Scale ..................................
       options:
           - 1
           - Somewhat relevant (2)
@@ -49,7 +49,7 @@ body:
       
   - type: dropdown
     attributes:
-      label: Scale Validity
+      label: Scale .................................
       options:
           - 1
           - 2
@@ -64,7 +64,7 @@ body:
       
   - type: dropdown
     attributes:
-      label: Scale Significance/Original Contribution
+      label: Scale ....................................
       options:
           - 1
           - 2
@@ -79,7 +79,7 @@ body:
       
   - type: dropdown
     attributes:
-      label: Scale Methodological Basis & Rigor
+      label: Scale ..............................
       options:
           - 1
           - 2
@@ -94,7 +94,7 @@ body:
       
   - type: dropdown
     attributes:
-      label: Scale Clarity & Accessibility
+      label: Scale .............................
       options:
           - 1
           - Needs Significant Improvement (2)
