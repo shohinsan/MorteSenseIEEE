@@ -5,40 +5,9 @@ The \brand{} project had several requirements that the development team met to
 create an efficient and reliable security system. %
 These requirements included the system's ability to detect motion accurately and differentiate between human and
 non-human motion to avoid false alarms. %
-Optional requirements included distinguishing between different types of human motion, web-based monitoring and control, and a
-built-in camera. %
+Optional requirements included distinguishing between different types of human motion, web-based monitoring and control. %
 The system's non-functional requirements included being reliable, secure,
 easy to use, and having a long lifespan with minimal maintenance. %
-
-\subsection{System Functional Requirements}\label{subsec:system-functional-requirements}
-
-Below are the functional requirements deemed essential for the project:
-\begin{itemize}
-    \item The system shall be able to detect motion accurately using microwave sensors with a range of at least 10 meters
-    \item The system shall be able to send SMS notifications to a specific mobile device within 5 seconds of detecting motion
-    \item The system shall have a built-in algorithm to differentiate between human motion and other types of motion, such as pets or moving objects, to avoid false alarms
-    \item The system shall have a remote control that allows users to arm and disarm the system easily
-    \item The system shall have a backup power supply that can provide at least 24 hours of continuous operation during power outages
-\end{itemize}
-
-The only functional requirement that was deemed desirable for the project involves the
-system having a web-based interface that allows users to remotely monitor and control the
-system, view motion event history, and adjust system settings. %
-
-\subsection{System Nonfunctional Requirements}\label{subsec:system-nonfunctional-requirements}
-
-Below are the nonfunctional requirements deemed essential for this project:
-\begin{itemize}
-    \item The system shall be reliable and have a low false alarm rate of no more than 1%
-    \item The system shall be easy to install and set up with clear instructions and user manuals provided
-    \item The system shall be secure and prevent unapproved entery to private data or system configurations
-\end{itemize}
-
-Below are the nonfunctional requirements deemed desirable for this project:
-\begin{itemize}
-    \item The system should have a user-friendly interface that is intuitive and easy to use, with clear visual and auditory feedback provided
-    \item The system should be design to have lower power consumption, consuming no more than 5 watts per hour to reduce operating costs
-\end{itemize}
 
 \subsection{Context and Interface Requirements}\label{subsec:context-and-interface-requirements}
 
@@ -51,33 +20,26 @@ intended audience. %
 \subsection{Technology and Resource Requirements}\label{subsec:technology-and-resource-requirements}
 
 There are several different resource requirements, and have been compiled into three
-different categories: Hardware, Software, and Miscellaneous. %
+different categories.%
 
-With respect to hardware, the resources used include a Raspberry Pi Pico W Microcontroller
-with a 2.4GHz Wi-Fi Module furnishing, a 5.8GHz Microwave Motion Sensor, and the Thonny IDE
-with Micropython. %
-The Microcontroller is programmed to connect to the home Wi-Fi network and send API requests to the backend server after processing motion detection data.
-The motion sensor emits electromagnetic radiation that penetrates through non-solid objects and bounces
-off solid objects. %
-The Doppler effect is used to detect the slightest movement changes and the sensor makes use of serial communications to exchange data between the microcontroller
-and the motion sensor. %
-This allows modification of sensitivity, distance, and other parameters of the sensor. %
-Thonny allows for compiling of Micropython into C code to effectively program the hardware. %
+\begin{table}[htbp]
+    \begin{center}
+        \begin{tabular}{|p{0.2\linewidth}|p{0.8\linewidth}|}
+            \hline
+            Hardware & The Microcontroller connects to home Wi-Fi, sending API requests to the backend server post-motion detection. The motion sensor, utilizing electromagnetic radiation and the Doppler effect, employs serial communications for data exchange. Thonny compiles Micropython into C code for hardware programming.
+            \\
+            \hline
+            Software & The Flask framework responds to hardware API requests, offering a web-based interface for remote system control. The server acts as a gateway between AWS and a SQLite database. Twilio handles SMS notifications, while AWS manages data traffic, providing diverse sensor metrics.
+            \\
+            \hline
+            Miscellaneous & Fritzing aids in hardware ideation and simulation before assembly, while SolidWorks designs enclosures. Makerspaces at San Jose State University support the hardware design process. \\
+            \hline
+        \end{tabular}
+        \label{tab1}
+    \end{center}
+    \caption{Resource Requirement}
+\end{table}
 
-With respect to software, the resources used include the Python Flask framework for the
-database server, ReactJS for the frontend, the Twilio API for notification service,
-and Amazon AWS for cloud computing and reporting analysis. %
-The Flask framework responds to the provided hardware API requests and provides a web-based interace to allow users
-to remotely monitor and control the system. %
-The server functions as a gateway between AWS services and a SQLite database to store and provide systems information. %
-The Twilio API is responsible for sending SMS notifications to client devices, and Amazon
-AWS is responsible for handling and analyzing data traffic to provide different metrics
-for what the sensor(s) report. %
 
-In terms of miscellaneous resource requirements, the Fritzing circuit design software,
-SolidWorks CAD software, soldering tools, and 3D printing hardware were used to design,
-simulate, and improve upon the hardware at different stages of assembly. %
-Fritzing was used during ideation to design and simulate the hardware scheme before actual assembly
-and soldering. %
-SolidWorks was used to design and prototype enclosures for the
-component assembly, and was aided by the Makerspaces available at San Jose State University. %
+
+
