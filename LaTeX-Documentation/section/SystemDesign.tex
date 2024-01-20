@@ -104,32 +104,6 @@ SMS Notifications. %
 
 \input{datasets/diagrams/SequenceDiagram}
 
-The sequence of events is as follows:
-\begin{enumerate}
-    \item The User triggers the Microwave Sensor to start monitoring for motion detection
-          by calling the startSecurity() method. %
-    \item The MicrowaveSensor detects motion and triggers the Notification and SMSService
-          to send a notification and an SMS message to the user, respectively. %
-    \item The Notification creates a new notification by calling the create() method,
-          which generates a new notification ID\@. %
-    \item The Notification saves the notification data to the Database by calling the
-          save(notification) method. %
-    \item The Notification sets the status of the notification to ``sent'' by calling the
-          setStatus``sent'' method. %
-    \item The SMSService creates a new SMS service by calling the create() method,
-          which generates a new smsServiceId. %
-    \item The SMSService saves the SMS service data to the Database by calling the
-          save(sms\_service) method. %
-    \item The SMSService sets the status of the SMS service to ``sent'' by calling the
-          setStatus``sent'' method. %
-    \item The SMSService sends an SMS message to the user by calling the sendSMS()
-          method. %
-    \item The SMSService saves the log data related to the SMS message to the
-          SMSServiceLog table by calling the save(sms\_service\_log) method. %
-    \item The Notification saves the log data related to the notification to the
-          NotificationLog table by calling the save(notification\_log) method. %
-\end{enumerate}
-
 In this way, the system can detect motion using the MicrowaveSensor, send notifications
 and SMS messages to the user using the Notification and SMSService classes, respectively,
 and store data related to these events using the Database, NotificationLog, and
