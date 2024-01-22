@@ -305,3 +305,4 @@ TSWLatexianTemp*
 
 LaTeX-Documentation/datasets/images/*.pdf
 
+.DS_Store
