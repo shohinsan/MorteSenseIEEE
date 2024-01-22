@@ -1,6 +1,3 @@
-\setlength{\tabcolsep}{10pt}
-\renewcommand{\arraystretch}{1.5}
-
 \section{Project Requirements}\label{sec:project-requirements}
 
 \subsection{Domain and Business Requirements}\label{subsec:domain-and-business-requirements}
@@ -25,18 +22,14 @@ intended audience. %
 There are several different resource requirements, and have been compiled into three
 different categories as shown in Table~\ref{tab:tab1}.
 
+
 \begin{table}[htbp]
     \begin{center}
         \begin{tabular}{|p{0.2\linewidth}|p{0.6\linewidth}|}
             \hline
-            Hardware      & The Microcontroller connects to home Wi-Fi, sending API requests to the backend server post-motion detection. The motion sensor, utilizing electromagnetic radiation and the Doppler effect, employs serial communications for data exchange. Thonny compiles Micropython into C code for hardware programming.
-            \\
-            \hline
-            Software      & The Flask framework responds to hardware API requests, offering a web-based interface for remote system control. The server acts as a gateway between AWS and a SQLite database. Twilio handles SMS notifications, while AWS manages data traffic, providing diverse sensor metrics.
-            \\
-            \hline
-            Miscellaneous & Fritzing aids in hardware ideation and simulation before assembly, while SolidWorks designs enclosures. Makerspaces at San Jose State University support the hardware design process.                                                                                                                           \\
-            \hline
+            \tablex{Hardware}{The Microcontroller connects to home Wi-Fi, sending API requests to the backend server post-motion detection. The motion sensor, utilizing electromagnetic radiation and the Doppler effect, employs serial communications for data exchange. Thonny compiles Micropython into C code for hardware programming.}
+            \tablex{Software}{The Flask framework responds to hardware API requests, offering a web-based interface for remote system control. The server acts as a gateway between AWS and a SQLite database. Twilio handles SMS notifications, while AWS manages data traffic, providing diverse sensor metrics.}
+            \tablex{Miscellaneous}{Fritzing aids in hardware ideation and simulation before assembly, while SolidWorks designs enclosures. Makerspaces at San Jose State University support the hardware design process.}                                                                                                                          
         \end{tabular}
     \end{center}
     \caption{Resource Requirement}
