@@ -83,18 +83,39 @@ to be far more efficient compared to other algorithms~\cite{khanEtAl2021}. Using
 learning was beyond the scope of this project, but it is a valid consideration in building
 upon the work for a graduate research project.
 
-% Insert paragraph on Ahmed below
-In that same year...
+In that same year, two researchers used the Microchip Atmega8 platform to develop a system
+that was capable of three distinct types of alarms to account for different types of events,
+including fires, motion sensing, and burglary through attempted break-in. The technology used
+for motion sensing included a light-dependent potentiometer (LDR), which differs from
+conventional infrared (IR) sensors in that LDRs use the entire spectrum of visible light,
+whereas IR sensors only used a particular subset of the light spectrum. While the system was
+comprehensive, there was clear emphasis placed on the work of continuously powering the
+system through solar energy.\cite{chowdhuryAhmed2021} This presents a clear avenue for
+further development of MorteSense in future work -- Or for prospective users -- to develop
+solar-powered modules as opposed to energy-efficient, battery-dependent modules.
 
-% Insert paragraph on Wahyuni below
+Researchers have also explored using different tools and frameworks such as web-based
+messaging as opposed to proprietary mobile notifications or SMS notifications, as shown in a
+study conducted by a small group of researchers that developed a system based on Passive
+Infrared (PIR) sensing along with a local and Telegram-based notification methods. The local
+notification system entailed the use of a buzzer that would audibly signal any individual in
+the immediate vicinity of movement detected by the PIR sensor managed by the WEMOS D1
+microcontroller used in the configuration. Meanwhile, a Telegram notification would be
+automatically sent to the end user at the same time to notify them that motion had been
+detected within a few seconds in the locale, or up to 20.66 seconds if the user was well over
+100km away. \cite{WahyuniEtAl2021}
 
 % Insert paragraph on Rhizma below
 
+
 % Insert paragraph on Balaji below
+
 
 % Insert paragraph on Hameed below
 
+
 % Insert paragraph on Taiwo below
+
 
 \subsection{State of the Art}\label{subsec:state-of-the-art}
 
@@ -122,13 +143,14 @@ detect motion past objects, which means that large furniture may prevent detecti
 Another limitation of PIR sensors is that their perception of temperature may be thrown off
 by high ambient temperature or by wind, meaning that if the weather is hot, it may not detect
 motion as a result of a false negative, or if it is windy, it may create a false
-positive~\cite{sarhan2020}. In short, PIR sensors have a reduced effective distance because
+positive. In short, PIR sensors have a reduced effective distance because
 of the environmental factors that can affect their ability to make accurate detections.
 Nonetheless, the latest advancements have resulted in the recent acceptance of microwave
 motion detector sensors that utilize the Doppler effect to detect motion behind objects
-and are not susceptible to the environmental factors that impact PIR sensors\cite{sarhan2020}. This means that cutting-edge DIY home security can more reliably detect motion
-behind large furniture and can be installed outside the house without as much concern for
-environmental factors affecting the capacity to detect motion.
+and are not susceptible to the environmental factors that impact PIR sensors.
+\cite{sarhan2020} This means that cutting-edge DIY home security can more reliably detect
+motion behind large furniture and can be installed outside the house without as much concern
+for environmental factors affecting the capacity to detect motion.
 
 The Raspberry Pi and Arduino platforms have been extensively used as research tools by the
 IEEE to explore different wireless communications technologies in the DIY space, as well as
