@@ -58,13 +58,15 @@ IoT such as certain Bluetooth specifications, alternative microcontroller platfo
 Learning as well as public web messaging protocols. It was also a time when collective reflection was occurring and literature reviews compiling research of previous years were being published for future research and projects to reference when the COVID-19 Pandemic no longer affected current research efforts.
 
 Arif et al. examined the development of blockchain technology and its ability to
-handle great demand in its use cases in 2020. They evaluated the possibility of using blockchain technology to back IoT devices in DIY smart home security with a proposed blockchain configuration. They found that while it was cost-effective and remained independent of cloud storage, the computation difficulty was set to the lowest possible, which may become complicated as more devices are added to the security system.
-\cite{arifEtAl_2020}
-Variable computation difficulty is a new technique gaining popularity, but further
-research was made on the hardware requirements, and it was found to require more
-resources than what had been planned for the scope of the project.
-This is because the project will include web services and a deliberately
-designed user experience.
+handle great demand in its use cases in 2020. They evaluated the possibility of using
+blockchain technology to back IoT devices in DIY smart home security with a proposed
+blockchain configuration. They found that while it was cost-effective and remained
+independent of cloud storage, the computation difficulty was set to the lowest possible,
+which may become complicated as more devices are added to the security system.
+\cite{arifEtAl_2020} Variable computation difficulty is a new technique gaining popularity,
+but further research was made on the hardware requirements, and it was found to require more
+resources than what had been planned for the scope of the project. This is because the
+project will include web services and a deliberately designed user experience.
 
 IEEE member Qusay Sarhan conducted a comprehensive literature review in 2020, providing an
 overview of dozens of research reports on smart home safety and security systems that
@@ -105,17 +107,33 @@ automatically sent to the end user at the same time to notify them that motion h
 detected within a few seconds in the locale, or up to 20.66 seconds if the user was well over
 100km away. \cite{WahyuniEtAl2021}
 
-% Insert paragraph on Rhizma below
+In 2022, different computer architectures and custom solutions were explored,
+as shown in a study making use of the ATmega2560 microcontroller within an Arduino base. The
+system design involved a PIR sensor combined with an electrochemical sensor to detect both
+motion and fire hazards. The main shortcoming of this system involved the requirement of an
+object having to move for over 25 seconds before motion would be registered, and the need to
+adjust the electrochemical sensor to be able to detect certain gas contents.
+\cite{rhizmaSuhendar2022}
 
+Bluetooth was also explored instead of Wi-Fi for piconets instead of solely depending on
+Wi-Fi which allows for higher fidelity communications between devices without the need for an
+intermediary 'middle-man' device. In one study, the Arduino Nano microcontroller was used
+with Bluetooth specification HC 06 to create a small network of sensors spanning commercial
+buildings to create an effective, efficient, and inexpensive security solution. The system
+design involved the use of a PIR sensor as well as dedicated hardware to enable Bluetooth HC
+06 as well as a motor driver circuit to maneuver (assumed already-present) CCTV cameras in
+response to detected motion. Ultimately, multiple measures were used to record detected
+activity as well as sending SMS notifications through GSM to notify end users of suspicious
+activities. \cite{HameedEtAl2022}
 
-% Insert paragraph on Balaji below
-
-
-% Insert paragraph on Hameed below
-
-
-% Insert paragraph on Taiwo below
-
+Recently, further work was built upon the work done by Arif et al. as well as Khan et al. by
+creating a customized model based on convolutional neural networks for a system built on an
+ESP32 camera for surveillance, PIR sensors for motion detection, and a DHT11 temperature and
+humidity sensor for increased accuracy of the PIR sensor. The central microcontroller was the
+ESP8266 platform that communicated through Wi-Fi, and it was found that the custom deep
+learning model was better suited to avoiding false positives, and enhance PIR accuracy
+through climate predictions rather than being able to detect unusual motion well.
+\cite{TaiwoEtAl2022}
 
 \subsection{State of the Art}\label{subsec:state-of-the-art}
 
@@ -125,7 +143,7 @@ use of modules. These products are often well-established and are only revised i
 are not directly observable by the end user. Rather, the underlying technology may change
 while the enclosure receives minor modifications at most. \cite{sarhan2020} The most common
 implementation for state-of-the-art home security systems involves the use of modules that
-connect wirelessly to a central unit through some wireless protocol. \cite{joseMalekian2017}
+connect wirelessly to a central unit through some wireless protocol. \cite{joseMalekian2017} \cite{chowdhuryAhmed2021} \cite{WahyuniEtAl2021} \cite{rhizmaSuhendar2022} \cite{HameedEtAl2022}
 
 Alternatively, each individual module can connect to the internet. \cite{sarhan2020} From
 there, the modules are handled by a mobile application that allows the user to configure
@@ -157,6 +175,6 @@ IEEE to explore different wireless communications technologies in the DIY space,
 for a central DIY security platform that is compared to established home/personal security
 products \cite{sarhan2020}. Over the past decade, Arduinos and their respective
 microcontrollers have increasingly used different connectivity types such as XBee, Ethernet,
-Wi-Fi, and Bluetooth \cite{sarhan2020}. With the release of the 802.11n-capable Raspberry
-Pi Pico W in 2022, the project builds upon the work covered by previous research that used
-both mainline platforms or similar microcontrollers.
+Wi-Fi, and Bluetooth \cite{sarhan2020} \cite{HameedEtAl2022}. With the release of the
+802.11n-capable Raspberry Pi Pico W in 2022, the project builds upon the work covered by
+previous research that used both mainline platforms or similar microcontrollers.
