@@ -30,7 +30,7 @@ body:
   - type: textarea
     attributes:
       label: Relevance
-      description: Describe the relevance of the paper to the project.
+      description: Describe the relevance of the paper to our platform.
       
   - type: dropdown
     attributes:
